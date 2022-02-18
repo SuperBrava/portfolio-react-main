@@ -1,16 +1,25 @@
 .app{
- height: 100vh;
+    background:url("./images/background7.jpg") no-repeat center center fixed;
+    background-size:cover;
+    height:100vh;
+    width:100vw;
 
  .sections{
      width: 100%;
      height: calc(100vh - 70px);
-     background-color: lightcoral;
      position: relative;
      top: 70px;
+     scroll-behavior: smooth;
+     scroll-snap-type: y mandatory;
+     scrollbar-width: none; //for firefox
+        &::-webkit-scrollbar{
+            display: none;
+        }
 
      > *{
          width: 100vw;
          height: calc(100vh - 70px);
+         scroll-snap-align: start;
      }
  }
 }
